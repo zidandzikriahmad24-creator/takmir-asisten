@@ -227,8 +227,8 @@ const SB=[["Syarat sah salat","<ol><li>Beragama Islam dan berakal</li><li>Sudah 
 $("#hk").innerHTML=SB.map(([t,b],i)=>`<details ${i==0?"open":""}><summary>${t}</summary><div>${b=="BC"?BC.map(c=>`<div class="bc"><b>${c[0]}</b><p class="ar">${c[1]}</p><small>${c[2]}</small></div>`).join(""):b=="PS"?'<div class="pose">'+PS.map(p=>`<div>${p[1]}<p><b>${p[0]}</b><br>${p[2]}</p></div>`).join("")+"</div>":b}</div></details>`).join("");
 /* leaderboard */
 const ABSEN_URL="https://claude.ai/artifact/Ht2wC6XempagQMdcJrbA6z#absen";/* ganti dengan link lain (mis. Google Form) bila perlu */
-const FORM_URL="";/* TEMPEL link Google Form (yang berakhiran /viewform) */
-const SHEET_CSV="";/* TEMPEL link CSV hasil "Publikasikan ke web" dari Google Sheet respons */
+const FORM_URL="https://docs.google.com/forms/d/e/1FAIpQLSei1_xm6NOV1Y9VTmpbFJx1sW_axtI3-Fz3IYfu2DFjG6QSrQ/viewform";/* TEMPEL link Google Form (yang berakhiran /viewform) */
+const SHEET_CSV="https://docs.google.com/spreadsheets/d/e/2PACX-1vT5_9WOCBuC0XYVGsyzpTn4QvwqeXBvWoeeniTX7s_nQcGJh72CZlSGIT2FBsmx5D96unjDh-TEltqX/pub?gid=216684665&single=true&output=csv";/* TEMPEL link CSV hasil "Publikasikan ke web" dari Google Sheet respons */
 const TI=[["Salat Subuh",10],["Salat Zuhur",10],["Salat Asar",10],["Salat Magrib",10],["Salat Isya",10],["Mengaji hari ini",15]];
 const TA=[["Membantu orang tua",10],["Bersedekah",10],["Membantu teman atau tetangga",10],["Membersihkan masjid atau lingkungan",10]];
 const SM=[["Aisyah",245,120],["Fahri",230,110],["Naufal",198,90],["Zahra",176,80],["Raka",150,60]];

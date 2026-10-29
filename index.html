@@ -34,7 +34,7 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #1d
 @media(max-width:719px){
 .stage{aspect-ratio:auto;container-type:normal;padding-bottom:16px}
 .bg{position:relative;height:76vw;background-size:auto 110%;background-position:0 0}
-.bubble{position:relative;left:auto;top:auto;width:auto;margin:-10px 12px 0 36vw;font-size:15px;padding:10px 12px}
+.bubble{position:relative;left:auto;top:auto;width:auto;margin:-14px 12px 0;font-size:15px;padding:10px 12px}
 .bubble:before{display:none}.chips{gap:6px;margin-top:8px}.chips button{font-size:14px;padding:6px 12px}
 .menu{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:14px 12px 0}
 .menu a{position:static!important;width:auto;height:54px;font-size:18px;border-radius:12px;border-width:2px}
@@ -48,6 +48,10 @@ button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #1d
 @keyframes br{50%{transform:scaleY(1.008)}}@keyframes tk{50%{transform:translateY(-.35cqw)}}
 @media(max-width:719px){.chr{height:76vw;background-size:auto 110%;background-position:0 0;transform-origin:34% 100%;-webkit-mask-image:linear-gradient(to right,#000 66%,transparent 82%),linear-gradient(to bottom,transparent 11%,#000 20%);mask-image:linear-gradient(to right,#000 66%,transparent 82%),linear-gradient(to bottom,transparent 11%,#000 20%)}}
 .mname img{height:9cqw;width:auto;display:block}@media(max-width:719px){.mname img{height:56px}}
+.rot{display:none;position:fixed;left:10px;right:10px;bottom:calc(10px + env(safe-area-inset-bottom,0px));z-index:50;align-items:center;gap:10px;padding:10px 12px;color:#fff;background:linear-gradient(#e9b34f,#c8861f);border:2px solid #f2c565;border-radius:14px;box-shadow:0 4px 14px rgba(90,60,10,.35);font:600 14px/1.35 Nunito,sans-serif}
+.rot .ic{font-size:26px;display:inline-block;animation:rt 2.4s ease-in-out infinite}@keyframes rt{0%,25%{transform:rotate(0)}60%,100%{transform:rotate(-90deg)}}
+.rot button{margin-left:auto;border:0;background:rgba(255,255,255,.25);color:#fff;font:700 16px/1 Fredoka,sans-serif;width:30px;height:30px;border-radius:50%;cursor:pointer;flex:none}
+@media(max-width:719px) and (orientation:portrait){.rot{display:flex}}
 /* halaman dalam */
 .page{max-width:920px;margin:auto;padding:16px 16px 48px}
 .top{display:flex;align-items:center;gap:12px;margin-bottom:14px}
@@ -86,7 +90,8 @@ input[type=text]{font:16px Nunito,sans-serif;padding:8px 12px;border:2px solid #
 .cp{margin-top:10px;border-top:1px dashed #e4c27a;padding-top:10px}.cp .big b{font:700 34px Fredoka,sans-serif;color:var(--gd)}.cp svg{width:100%;max-width:560px;display:block;margin:8px 0;background:#fffdf6;border:1.5px solid #ecc673;border-radius:10px;padding:4px}
 details h4{font:600 16px Fredoka,sans-serif;color:var(--gd);margin:14px 0 4px}details ol{margin:6px 0;padding-left:22px}.tabs{display:flex;gap:8px;margin-bottom:12px}.tabs button{flex:1;font:600 16px Fredoka,sans-serif;padding:10px 6px;border:2px solid #ecc673;border-radius:14px;background:#fffdf6;color:var(--gd);cursor:pointer}.tabs button.on{background:linear-gradient(#f4c964,#d6962c);color:#fff;border-color:#d6962c}#qr{display:flex;justify-content:center;padding:12px;background:#fff;border-radius:10px;margin:10px 0}#qr img,#qr canvas{max-width:100%;height:auto}#mur .btn{margin:4px 6px 4px 0}#qin{width:100%;margin-top:6px;padding:9px;border:2px solid #ecc673;border-radius:10px;font:inherit}</style></head><body>
 
-<main id="home" class="view on"><div class="stage">
+<main id="home" class="view on"><div class="rot" role="status"><span class="ic" aria-hidden="true">📱</span><span>Untuk tampilan terbaik, putar HP ke posisi <b>landscape</b> (mendatar).</span><button type="button" aria-label="Tutup saran" onclick="this.parentNode.remove()">✕</button></div>
+<div class="stage">
 <div class="bg" role="img" aria-label="Asisten takmir menyambut jamaah di depan masjid"></div>
 <div class="chr" aria-hidden="true"></div>
 <div class="bubble" id="bub" aria-live="polite"></div>
